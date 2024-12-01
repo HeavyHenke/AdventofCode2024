@@ -9,7 +9,7 @@ public static class Program
     {
         var sw = Stopwatch.StartNew();
 
-        var result = new Day1().Part2();
+        var result = new Day2().Part1();
 
         sw.Stop();
 
