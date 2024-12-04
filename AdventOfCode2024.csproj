@@ -17,4 +17,14 @@
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Day2_test.txt" />
+      <Content Include="Day2_test.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Day2.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
