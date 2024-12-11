@@ -14,7 +14,7 @@ public class Day2
         return numSafe.ToString();
     }
 
-    private bool IsSafeAscending(IList<int> numbers)
+    private static bool IsSafeAscending(IList<int> numbers)
     {
         for (int i = 1; i < numbers.Count; i++)
         {
@@ -27,7 +27,7 @@ public class Day2
         return true;
     }
 
-    private bool IsSafeDescending(IList<int> numbers)
+    private static bool IsSafeDescending(IList<int> numbers)
     {
         for (int i = 1; i < numbers.Count; i++)
         {
@@ -44,18 +44,18 @@ public class Day2
     public string Part2()
     {
         var lines = File.ReadAllLines("Day2.txt")
-            .Select(l => l.Split(' ').Select(int.Parse).ToArray()).ToArray();
+            .Select(l => l.Split(' ').Select(int.Parse).ToArray());
         
         var numSafe = lines.Count(IsSafeWithDamper);
         return numSafe.ToString();
     }
 
-    private bool IsSafeWithDamper(IList<int> numbers)
+    private static bool IsSafeWithDamper(int[] numbers)
     {
         if (IsSafeAscending(numbers) || IsSafeDescending(numbers))
             return true;
 
-        for (int i = 0; i < numbers.Count; i++)
+        for (int i = 0; i < numbers.Length; i++)
         {
             var damped = numbers.ToList();
             damped.RemoveAt(i);
