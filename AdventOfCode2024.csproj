@@ -9,46 +9,7 @@
     </PropertyGroup>
     
     <ItemGroup>
-      <Content Include="Day2_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day2.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day3_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day3.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day4_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day4.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day5_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day5.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day6_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day6.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day7_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day7.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day8_test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="Day8.txt">
+      <Content Include="*.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
