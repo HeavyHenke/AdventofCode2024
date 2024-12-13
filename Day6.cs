@@ -125,4 +125,14 @@ internal readonly record struct Coord
     {
         return X >= 0 && Y >= 0 && Y < map.Length && X < map[0].Length;
     }
+
+    public static Coord operator +(Coord a, (int dx, int dy) b)
+    {
+        return new Coord(a.X + b.dx, a.Y + b.dy);
+    }
+    
+    public static Coord operator -(Coord a, (int dx, int dy) b)
+    {
+        return new Coord(a.X - b.dx, a.Y - b.dy);
+    }
 }
