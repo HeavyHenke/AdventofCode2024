@@ -135,4 +135,34 @@ internal readonly record struct Coord
     {
         return new Coord(a.X - b.dx, a.Y - b.dy);
     }
+
+    public IEnumerable<Coord> GetAdjacent(int maxX, int maxY)
+    {
+        if(X > 0)
+            yield return new Coord(X - 1, Y);
+        if(Y > 0)
+            yield return new Coord(X, Y - 1);
+        if(X < maxX)
+            yield return new Coord(X + 1, Y);
+        if(Y < maxY)
+            yield return new Coord(X, Y + 1);
+    }
+}
+
+internal static class CoordExtensions
+{
+    public static char GetAt(this string[] array, Coord coord)
+    {
+        return array[coord.Y][coord.X];
+    }
+
+    public static IEnumerable<(Coord cord, char obj)> EnumerateAll(this string[] array)
+    {
+        for(int y = 0; y < array.Length; y++)
+        for(int x = 0; x < array[y].Length; x++)
+        {
+            var cord = new Coord(x, y);
+            yield return (cord, array[y][x]);
+        }
+    }
 }
