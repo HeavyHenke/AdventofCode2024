@@ -136,6 +136,11 @@ internal readonly record struct Coord
         return new Coord(a.X - b.dx, a.Y - b.dy);
     }
 
+    public static Coord operator *(Coord a, int b)
+    {
+        return new Coord(a.X * b, a.Y * b);
+    }
+    
     public IEnumerable<Coord> GetAdjacent(int maxX, int maxY)
     {
         if(X > 0)
@@ -146,6 +151,14 @@ internal readonly record struct Coord
             yield return new Coord(X + 1, Y);
         if(Y < maxY)
             yield return new Coord(X, Y + 1);
+    }
+
+    public IEnumerable<Coord> GetAllAdjacent()
+    {
+        yield return new Coord(X - 1, Y);
+        yield return new Coord(X, Y - 1);
+        yield return new Coord(X + 1, Y);
+        yield return new Coord(X, Y + 1);
     }
 }
 
